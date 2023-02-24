@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActionGrammar", "ActionGrammar.csproj", "{FF5ED256-E731-44C4-BF99-645C2A2AE95D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ActionGrammar", "ActionGrammar.csproj", "{FF5ED256-E731-44C4-BF99-645C2A2AE95D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestActionGrammar", "..\TestActionGrammar\TestActionGrammar.csproj", "{2E6C14D5-E1B9-4335-A2C8-8239C9AE28BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{FF5ED256-E731-44C4-BF99-645C2A2AE95D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF5ED256-E731-44C4-BF99-645C2A2AE95D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF5ED256-E731-44C4-BF99-645C2A2AE95D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E6C14D5-E1B9-4335-A2C8-8239C9AE28BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E6C14D5-E1B9-4335-A2C8-8239C9AE28BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E6C14D5-E1B9-4335-A2C8-8239C9AE28BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E6C14D5-E1B9-4335-A2C8-8239C9AE28BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
