@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="255" height="125">
+   <defs>
+      <style type="text/css">
+    @namespace "http://www.w3.org/2000/svg";
+    .line                 {fill: none; stroke: #003300; stroke-width: 1;}
+    .bold-line            {stroke: #001400; shape-rendering: crispEdges; stroke-width: 2;}
+    .thin-line            {stroke: #001F00; shape-rendering: crispEdges}
+    .filled               {fill: #003300; stroke: none;}
+    text.terminal         {font-family: Verdana, Sans-serif;
+                            font-size: 12px;
+                            fill: #001400;
+                            font-weight: bold;
+                          }
+    text.nonterminal      {font-family: Verdana, Sans-serif;
+                            font-size: 12px;
+                            fill: #001A00;
+                            font-weight: normal;
+                          }
+    text.regexp           {font-family: Verdana, Sans-serif;
+                            font-size: 12px;
+                            fill: #001F00;
+                            font-weight: normal;
+                          }
+    rect, circle, polygon {fill: #003300; stroke: #003300;}
+    rect.terminal         {fill: #4DFF4D; stroke: #003300; stroke-width: 1;}
+    rect.nonterminal      {fill: #9EFF9E; stroke: #003300; stroke-width: 1;}
+    rect.text             {fill: none; stroke: none;}
+    polygon.regexp        {fill: #C7FFC7; stroke: #003300; stroke-width: 1;}
+  </style>
+   </defs>
+   <polygon points="9 17 1 13 1 21"/>
+   <polygon points="17 17 9 13 9 21"/>
+   <a xmlns:xlink="http://www.w3.org/1999/xlink"
+       xlink:href="#Auto"
+       xlink:title="Auto">
+      <rect x="31" y="3" width="48" height="32"/>
+      <rect x="29" y="1" width="48" height="32" class="nonterminal"/>
+      <text class="nonterminal" x="39" y="21">Auto</text>
+   </a>
+   <a xmlns:xlink="http://www.w3.org/1999/xlink"
+       xlink:href="#Invoicing"
+       xlink:title="Invoicing">
+      <rect x="119" y="3" width="76" height="32"/>
+      <rect x="117" y="1" width="76" height="32" class="nonterminal"/>
+      <text class="nonterminal" x="127" y="21">Invoicing</text>
+   </a>
+   <a xmlns:xlink="http://www.w3.org/1999/xlink"
+       xlink:href="#Changing"
+       xlink:title="Changing">
+      <rect x="119" y="47" width="80" height="32"/>
+      <rect x="117" y="45" width="80" height="32" class="nonterminal"/>
+      <text class="nonterminal" x="127" y="65">Changing</text>
+   </a>
+   <a xmlns:xlink="http://www.w3.org/1999/xlink"
+       xlink:href="#Confirming"
+       xlink:title="Confirming">
+      <rect x="119" y="91" width="88" height="32"/>
+      <rect x="117" y="89" width="88" height="32" class="nonterminal"/>
+      <text class="nonterminal" x="127" y="109">Confirming</text>
+   </a>
+   <path class="line"
+          d="m17 17 h2 m0 0 h10 m48 0 h10 m20 0 h10 m76 0 h10 m0 0 h12 m-128 0 h20 m108 0 h20 m-148 0 q10 0 10 10 m128 0 q0 -10 10 -10 m-138 10 v24 m128 0 v-24 m-128 24 q0 10 10 10 m108 0 q10 0 10 -10 m-118 10 h10 m80 0 h10 m0 0 h8 m-118 -10 v20 m128 0 v-20 m-128 20 v24 m128 0 v-24 m-128 24 q0 10 10 10 m108 0 q10 0 10 -10 m-118 10 h10 m88 0 h10 m23 -88 h-3"/>
+   <polygon points="245 17 253 13 253 21"/>
+   <polygon points="245 17 237 13 237 21"/>
+</svg>

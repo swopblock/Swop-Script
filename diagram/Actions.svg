@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="231" height="81">
+   <defs>
+      <style type="text/css">
+    @namespace "http://www.w3.org/2000/svg";
+    .line                 {fill: none; stroke: #003300; stroke-width: 1;}
+    .bold-line            {stroke: #001400; shape-rendering: crispEdges; stroke-width: 2;}
+    .thin-line            {stroke: #001F00; shape-rendering: crispEdges}
+    .filled               {fill: #003300; stroke: none;}
+    text.terminal         {font-family: Verdana, Sans-serif;
+                            font-size: 12px;
+                            fill: #001400;
+                            font-weight: bold;
+                          }
+    text.nonterminal      {font-family: Verdana, Sans-serif;
+                            font-size: 12px;
+                            fill: #001A00;
+                            font-weight: normal;
+                          }
+    text.regexp           {font-family: Verdana, Sans-serif;
+                            font-size: 12px;
+                            fill: #001F00;
+                            font-weight: normal;
+                          }
+    rect, circle, polygon {fill: #003300; stroke: #003300;}
+    rect.terminal         {fill: #4DFF4D; stroke: #003300; stroke-width: 1;}
+    rect.nonterminal      {fill: #9EFF9E; stroke: #003300; stroke-width: 1;}
+    rect.text             {fill: none; stroke: none;}
+    polygon.regexp        {fill: #C7FFC7; stroke: #003300; stroke-width: 1;}
+  </style>
+   </defs>
+   <polygon points="9 17 1 13 1 21"/>
+   <polygon points="17 17 9 13 9 21"/>
+   <a xmlns:xlink="http://www.w3.org/1999/xlink"
+       xlink:href="#UserAction"
+       xlink:title="UserAction">
+      <rect x="51" y="3" width="88" height="32"/>
+      <rect x="49" y="1" width="88" height="32" class="nonterminal"/>
+      <text class="nonterminal" x="59" y="21">UserAction</text>
+   </a>
+   <a xmlns:xlink="http://www.w3.org/1999/xlink"
+       xlink:href="#AutoAction"
+       xlink:title="AutoAction">
+      <rect x="51" y="47" width="88" height="32"/>
+      <rect x="49" y="45" width="88" height="32" class="nonterminal"/>
+      <text class="nonterminal" x="59" y="65">AutoAction</text>
+   </a>
+   <rect x="179" y="3" width="24" height="32" rx="10"/>
+   <rect x="177"
+          y="1"
+          width="24"
+          height="32"
+          class="terminal"
+          rx="10"/>
+   <text class="terminal" x="187" y="21">.</text>
+   <path class="line"
+          d="m17 17 h2 m20 0 h10 m88 0 h10 m-128 0 h20 m108 0 h20 m-148 0 q10 0 10 10 m128 0 q0 -10 10 -10 m-138 10 v24 m128 0 v-24 m-128 24 q0 10 10 10 m108 0 q10 0 10 -10 m-118 10 h10 m88 0 h10 m20 -44 h10 m24 0 h10 m3 0 h-3"/>
+   <polygon points="221 17 229 13 229 21"/>
+   <polygon points="221 17 213 13 213 21"/>
+</svg>
