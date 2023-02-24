@@ -1,4 +1,3 @@
-# ActionGrammar
 # Swopblock Action Grammar [DRAFT 02/24/23]
 
 The Swopblock action grammar is a grammar for messages that specify four kinds of actions each in a complete English sentence that are used together to specify a complete Swopblock transaction. The four types of actions are Ordering, Invoicing, Changing and Confirming. These actions are actions on the part of a user in the case of Ordering and are autonomous in the case of Invoicing, Changing and Confirming. The figures in this document are renderings based on EBNF notation grammar production rules with the literal production shown in round rectangles. (Note: this document specifies only a sub set of the eventual grammar required for expirations, cancellations, limit orders and other features of the Swopblock protocol.)
@@ -65,9 +64,9 @@ referenced by:
 * Confirming
 * Invoicing
 
-# Swopblock User Action Ordering Grammar
+# Swopblock Ordering Grammar
 
-The Swopblock user action ordering grammar is the grammar for a message that specifies an order made by a user that contains an offer and an order. There are two kinds of orders: orders that specify a bidding offer to buy an order and orders that specify an asking order to sell an offer.
+The Swopblock ordering grammar is the grammar for a message that specifies an order made by a user that contains an offer and an order. There are two kinds of orders: orders that specify a bidding offer to buy an order and orders that specify an asking order to sell an offer.
 
 **Ordering:**
 
@@ -105,9 +104,9 @@ referenced by:
 
 * Ordering
 
-# Swopblock Auto Action Invoicing Grammar
+# Swopblock Invoicing Grammar
 
-The Swopblock auto action invoicing grammar is the grammar for a kind of message that specifies an order made autonomously that matches offers to orders. There are two kinds of invoices: invoices that buy an order in exchange for an offer made by a user in a bid and invoices that sell in exchange for an offer made by a user in an ask.
+The Swopblock invoicing grammar is the grammar for a kind of message that specifies an order made autonomously that matches offers to orders. There are two kinds of invoices: invoices that buy an order in exchange for an offer made by a user in a bid and invoices that sell in exchange for an offer made by a user in an ask.
 
 **Invoicing:**
 
@@ -146,9 +145,9 @@ referenced by:
 
 * Invoicing
 
-# Swopblock Auto Action Changing Grammar
+# Swopblock Changing Grammar
 
-The Swopblock auto action changing grammar is the grammar for a kind of message that specifies a change made autonomously that fulfills invoice offers and orders. There are two kinds of changes: changes that “pay cash” (deliver SWOBL) for an invoice and changes that “cash in” (deliver BTC, ETH, etc.) for an invoice.
+The Swopblock changing grammar is the grammar for a kind of message that specifies a change made autonomously that fulfills invoice offers and orders. There are two kinds of changes: changes that “pay cash” (deliver SWOBL) for an invoice and changes that “cash in” (deliver BTC, ETH, etc.) for an invoice.
 
 **Changing:**
 
@@ -214,9 +213,9 @@ referenced by:
 * Paying
 * Receipting
 
-# Swopblock Auto Action Confirming Grammar
+# Swopblock Confirming Grammar
 
-The Swopblock auto action confirming grammar is the grammar for a kind of message that specifies a confirmation made autonomously that confirms a paying or cashing change that finalizes a Swopblock transaction. There are two kinds of confirmations: confirmations that confirm an expenditure (SWOBL delivery) and confirmations that confirm a receipt (BTC, ETH, etc. delivery).
+The Swopblock confirming grammar is the grammar for a kind of message that specifies a confirmation made autonomously that confirms a paying or cashing change that finalizes a Swopblock transaction. There are two kinds of confirmations: confirmations that confirm an expenditure (SWOBL delivery) and confirmations that confirm a receipt (BTC, ETH, etc. delivery).
 
 **Confirming:**
 
