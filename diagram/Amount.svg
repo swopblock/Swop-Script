@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="445" height="37">
+   <defs>
+      <style type="text/css">
+    @namespace "http://www.w3.org/2000/svg";
+    .line                 {fill: none; stroke: #003300; stroke-width: 1;}
+    .bold-line            {stroke: #001400; shape-rendering: crispEdges; stroke-width: 2;}
+    .thin-line            {stroke: #001F00; shape-rendering: crispEdges}
+    .filled               {fill: #003300; stroke: none;}
+    text.terminal         {font-family: Verdana, Sans-serif;
+                            font-size: 12px;
+                            fill: #001400;
+                            font-weight: bold;
+                          }
+    text.nonterminal      {font-family: Verdana, Sans-serif;
+                            font-size: 12px;
+                            fill: #001A00;
+                            font-weight: normal;
+                          }
+    text.regexp           {font-family: Verdana, Sans-serif;
+                            font-size: 12px;
+                            fill: #001F00;
+                            font-weight: normal;
+                          }
+    rect, circle, polygon {fill: #003300; stroke: #003300;}
+    rect.terminal         {fill: #4DFF4D; stroke: #003300; stroke-width: 1;}
+    rect.nonterminal      {fill: #9EFF9E; stroke: #003300; stroke-width: 1;}
+    rect.text             {fill: none; stroke: none;}
+    polygon.regexp        {fill: #C7FFC7; stroke: #003300; stroke-width: 1;}
+  </style>
+   </defs>
+   <polygon points="9 17 1 13 1 21"/>
+   <polygon points="17 17 9 13 9 21"/>
+   <rect x="31" y="3" width="78" height="32" rx="10"/>
+   <rect x="29"
+          y="1"
+          width="78"
+          height="32"
+          class="terminal"
+          rx="10"/>
+   <text class="terminal" x="39" y="21"> at least </text>
+   <a xmlns:xlink="http://www.w3.org/1999/xlink"
+       xlink:href="#Number"
+       xlink:title="Number">
+      <rect x="129" y="3" width="70" height="32"/>
+      <rect x="127" y="1" width="70" height="32" class="nonterminal"/>
+      <text class="nonterminal" x="137" y="21">Number</text>
+   </a>
+   <rect x="219" y="3" width="108" height="32" rx="10"/>
+   <rect x="217"
+          y="1"
+          width="108"
+          height="32"
+          class="terminal"
+          rx="10"/>
+   <text class="terminal" x="227" y="21"> and at most </text>
+   <a xmlns:xlink="http://www.w3.org/1999/xlink"
+       xlink:href="#Number"
+       xlink:title="Number">
+      <rect x="347" y="3" width="70" height="32"/>
+      <rect x="345" y="1" width="70" height="32" class="nonterminal"/>
+      <text class="nonterminal" x="355" y="21">Number</text>
+   </a>
+   <path class="line"
+          d="m17 17 h2 m0 0 h10 m78 0 h10 m0 0 h10 m70 0 h10 m0 0 h10 m108 0 h10 m0 0 h10 m70 0 h10 m3 0 h-3"/>
+   <polygon points="435 17 443 13 443 21"/>
+   <polygon points="435 17 427 13 427 21"/>
+</svg>
