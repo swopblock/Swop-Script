@@ -104,6 +104,68 @@ Asking   ::= 'asking ' Order 'in order for ' Offer
 referenced by:
 
 * Ordering
+* 
+**Offer:**
+
+![Offer](diagram/Offer.svg)
+
+```
+Offer    ::= Amount Unit 'using the ' Unit Address
+```
+
+**Order:**
+
+![Order](diagram/Order.svg)
+
+```
+Order    ::= Unit 'using the market'
+```
+
+**Unit:**
+
+![Unit](diagram/Unit.svg)
+
+```
+Unit     ::= 'BTC'
+           | 'ETH'
+           | 'SWOBL'
+```
+
+referenced by:
+
+* Offer
+* Order
+
+**Expiration:**
+
+![Expiration](diagram/Expiration.svg)
+
+```
+Expiration
+         ::= ' and is good until the SWOBL market volume reaches ' Amount
+```
+
+**Signature:**
+
+![Signature](diagram/Signature.svg)
+
+```
+Signature
+         ::= ' using my signature ' SignatureBinary
+```
+
+**Amount:**
+
+![Amount](diagram/Amount.svg)
+
+```
+Amount   ::= ' at least ' Number ' and at most ' Number
+```
+
+referenced by:
+
+* Expiration
+* Offer
 
 # Swopblock Invoicing Grammar
 
