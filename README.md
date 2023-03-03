@@ -69,12 +69,68 @@ referenced by:
 
 The Swopblock ordering grammar is the grammar for a message that specifies an order made by a user that contains an offer and an order. There are two kinds of orders: orders that specify a bidding offer to buy an order and orders that specify an asking order to sell an offer.
 
+**Actions:**
+
+![Actions](diagram/Actions.svg)
+
+```
+Actions  ::= ( UserAction | AutoAction ) '.'
+```
+
+**UserAction:**
+
+![UserAction](diagram/UserAction.svg)
+
+```
+UserAction
+         ::= User Ordering Experiation Signature
+```
+
+referenced by:
+
+* Actions
+
+**User:**
+
+![User](diagram/User.svg)
+
+```
+User     ::= 'I am '
+```
+
+referenced by:
+
+* UserAction
+
 **Ordering:**
 
 ![Ordering](diagram/Ordering.svg)
 
 ```
-Ordering ::= User ( Bidding | Asking )
+Ordering ::= Bidding
+           | Asking
+```
+
+referenced by:
+
+* UserAction
+
+**Expiration:**
+
+![Expiration](diagram/Expiration.svg)
+
+```
+Expiration
+         ::= ' and is good until the SWOBL market volume reaches ' Amount
+```
+
+**Signature:**
+
+![Signature](diagram/Signature.svg)
+
+```
+Signature
+         ::= ' using my signature ' Number
 ```
 
 referenced by:
@@ -104,7 +160,7 @@ Asking   ::= 'asking ' Order 'in order for ' Offer
 referenced by:
 
 * Ordering
-* 
+
 **Offer:**
 
 ![Offer](diagram/Offer.svg)
@@ -113,6 +169,11 @@ referenced by:
 Offer    ::= Amount Unit 'using the ' Unit Address
 ```
 
+referenced by:
+
+* Asking
+* Bidding
+
 **Order:**
 
 ![Order](diagram/Order.svg)
@@ -120,6 +181,24 @@ Offer    ::= Amount Unit 'using the ' Unit Address
 ```
 Order    ::= Unit 'using the market'
 ```
+
+referenced by:
+
+* Asking
+* Bidding
+
+**Amount:**
+
+![Amount](diagram/Amount.svg)
+
+```
+Amount   ::= ' at least ' Number ' and at most ' Number
+```
+
+referenced by:
+
+* Expiration
+* Offer
 
 **Unit:**
 
@@ -135,37 +214,6 @@ referenced by:
 
 * Offer
 * Order
-
-**Expiration:**
-
-![Expiration](diagram/Expiration.svg)
-
-```
-Expiration
-         ::= ' and is good until the SWOBL market volume reaches ' Amount
-```
-
-**Signature:**
-
-![Signature](diagram/Signature.svg)
-
-```
-Signature
-         ::= ' using my signature ' SignatureBinary
-```
-
-**Amount:**
-
-![Amount](diagram/Amount.svg)
-
-```
-Amount   ::= ' at least ' Number ' and at most ' Number
-```
-
-referenced by:
-
-* Expiration
-* Offer
 
 # Swopblock Invoicing Grammar
 
