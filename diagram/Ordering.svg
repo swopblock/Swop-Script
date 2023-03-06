@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="233" height="81">
+<svg xmlns="http://www.w3.org/2000/svg" width="379" height="81">
    <defs>
       <style type="text/css">
     @namespace "http://www.w3.org/2000/svg";
@@ -32,28 +32,35 @@
    <polygon points="9 17 1 13 1 21"/>
    <polygon points="17 17 9 13 9 21"/>
    <a xmlns:xlink="http://www.w3.org/1999/xlink"
-       xlink:href="#User"
-       xlink:title="User">
-      <rect x="31" y="3" width="48" height="32"/>
-      <rect x="29" y="1" width="48" height="32" class="nonterminal"/>
-      <text class="nonterminal" x="39" y="21">User</text>
-   </a>
-   <a xmlns:xlink="http://www.w3.org/1999/xlink"
        xlink:href="#Bidding"
        xlink:title="Bidding">
-      <rect x="119" y="3" width="66" height="32"/>
-      <rect x="117" y="1" width="66" height="32" class="nonterminal"/>
-      <text class="nonterminal" x="127" y="21">Bidding</text>
+      <rect x="51" y="3" width="66" height="32"/>
+      <rect x="49" y="1" width="66" height="32" class="nonterminal"/>
+      <text class="nonterminal" x="59" y="21">Bidding</text>
    </a>
    <a xmlns:xlink="http://www.w3.org/1999/xlink"
        xlink:href="#Asking"
        xlink:title="Asking">
-      <rect x="119" y="47" width="62" height="32"/>
-      <rect x="117" y="45" width="62" height="32" class="nonterminal"/>
-      <text class="nonterminal" x="127" y="65">Asking</text>
+      <rect x="51" y="47" width="62" height="32"/>
+      <rect x="49" y="45" width="62" height="32" class="nonterminal"/>
+      <text class="nonterminal" x="59" y="65">Asking</text>
+   </a>
+   <a xmlns:xlink="http://www.w3.org/1999/xlink"
+       xlink:href="#Experiation"
+       xlink:title="Experiation">
+      <rect x="157" y="3" width="92" height="32"/>
+      <rect x="155" y="1" width="92" height="32" class="nonterminal"/>
+      <text class="nonterminal" x="165" y="21">Experiation</text>
+   </a>
+   <a xmlns:xlink="http://www.w3.org/1999/xlink"
+       xlink:href="#Signature"
+       xlink:title="Signature">
+      <rect x="269" y="3" width="82" height="32"/>
+      <rect x="267" y="1" width="82" height="32" class="nonterminal"/>
+      <text class="nonterminal" x="277" y="21">Signature</text>
    </a>
    <path class="line"
-          d="m17 17 h2 m0 0 h10 m48 0 h10 m20 0 h10 m66 0 h10 m-106 0 h20 m86 0 h20 m-126 0 q10 0 10 10 m106 0 q0 -10 10 -10 m-116 10 v24 m106 0 v-24 m-106 24 q0 10 10 10 m86 0 q10 0 10 -10 m-96 10 h10 m62 0 h10 m0 0 h4 m23 -44 h-3"/>
-   <polygon points="223 17 231 13 231 21"/>
-   <polygon points="223 17 215 13 215 21"/>
+          d="m17 17 h2 m20 0 h10 m66 0 h10 m-106 0 h20 m86 0 h20 m-126 0 q10 0 10 10 m106 0 q0 -10 10 -10 m-116 10 v24 m106 0 v-24 m-106 24 q0 10 10 10 m86 0 q10 0 10 -10 m-96 10 h10 m62 0 h10 m0 0 h4 m20 -44 h10 m92 0 h10 m0 0 h10 m82 0 h10 m3 0 h-3"/>
+   <polygon points="369 17 377 13 377 21"/>
+   <polygon points="369 17 361 13 361 21"/>
 </svg>
