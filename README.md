@@ -6,7 +6,6 @@ The Swopblock action grammar is a grammar for messages that specify four kinds o
 
 ![Intentions](diagram/Intentions.svg)
 
-![Intentions](UserIntentions.md)
 
 
 # Swopblock Order Grammar
@@ -17,7 +16,7 @@ The Swopblock ordering grammar is the grammar for a message that specifies an or
 
 ![Ordering](diagram/Ordering.svg)
 
-![Ordering](UserOrder.md)
+![Ordering](UserIntentions.md)
 
 
 # Swopblock Invoice Grammar
@@ -31,9 +30,9 @@ The Swopblock invoicing grammar is the grammar for a kind of message that specif
 ![Invoicing](AutoInvoice.md)
 
 
-# Swopblock Deliver Grammar
+# Swopblock Delivery Grammar
 
-The Swopblock changing grammar is the grammar for a kind of message that specifies a change made autonomously that fulfills invoice offers and orders. There are two kinds of changes: changes that “pay cash” (deliver SWOBL) for an invoice and changes that “cash in” (deliver BTC, ETH, etc.) for an invoice.
+The Swopblock changing grammar is the grammar for a kind of message that specifies a change made autonomously that fulfills invoice offers and orders. There are two kinds of deliveries: paying and cashing.
 
 **Delivering:**
 
@@ -42,9 +41,9 @@ The Swopblock changing grammar is the grammar for a kind of message that specifi
 ![Delivering](AutoDeliver.md)
 
 
-# Swopblock Confirm Grammar
+# Swopblock Confirmation Grammar
 
-The Swopblock confirming grammar is the grammar for a kind of message that specifies a confirmation made autonomously that confirms a paying or cashing change that finalizes a Swopblock transaction. There are two kinds of confirmations: confirmations that confirm an expenditure (SWOBL delivery) and confirmations that confirm a receipt (BTC, ETH, etc. delivery).
+The Swopblock confirming grammar is the grammar for a kind of message that specifies a confirmation made autonomously that confirms a paying or cashing change that finalizes a Swopblock transaction. There are two kinds of confirmations: expense and receipt.
 
 **Confirming:**
 
