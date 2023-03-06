@@ -2,6 +2,9 @@
 
 The Swopblock action grammar is a grammar for messages that specify four kinds of actions each in a complete English sentence that are used together to specify a complete Swopblock transaction. The four types of actions are Ordering, Invoicing, Changing and Confirming. These actions are actions on the part of a user in the case of Ordering and are autonomous in the case of Invoicing, Changing and Confirming. The figures in this document are renderings based on EBNF notation grammar production rules with the literal production shown in round rectangles. (Note: this document specifies only a sub set of the eventual grammar required for expirations, cancellations, limit orders and other features of the Swopblock protocol.)
 
+**TryThis:**
+
+![TryThis](UserIntentions.md)
 
 **Actions:**
 
