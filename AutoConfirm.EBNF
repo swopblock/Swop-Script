@@ -1,1 +1,24 @@
+Intentions ::= (User Ordering) | Auto ( Invoicing | Delivering | Confirming ) "."
+
+Auto ::= 'We are '
+
+Confirming ::= (Expensing | Receipting) Execution Signature
+
+Expensing ::= 'confirming the expense ' Expense ' paying for ' Receipt
+
+Receipting ::= 'confirming the receipt ' Receipt ' cashing for ' Expense
+
+Execution ::= ' and the order was executed when the market volume reached ' ExactAmount
+
+Signature ::= ' using the signature ' AlphaNumeric
+
+Expense ::= ExactAmount ' using ' Address
+
+Receipt ::= ExactAmount ' using ' Address
+
+ExactAmount ::= ' exactly ' Numeric Units
+
+Address ::= ' the ' Units ' address ' AlphaNumeric
+
+Units ::= 'BTC' | 'ETH' | 'SWOBL'
 
