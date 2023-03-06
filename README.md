@@ -8,7 +8,7 @@ The Swopblock action grammar is a grammar for messages that specify four kinds o
 
 
 
-# Swopblock Order Grammar
+# Order Grammar
 
 The Swopblock ordering grammar is the grammar for a message that specifies an order made by a user that contains an offer and an order. There are two kinds of orders: bidding and asking.
 
@@ -19,7 +19,7 @@ The Swopblock ordering grammar is the grammar for a message that specifies an or
 ![Ordering](UserIntentions.md)
 
 
-# Swopblock Invoice Grammar
+# Invoice Grammar
 
 The Swopblock invoicing grammar is the grammar for a kind of message that specifies an order made autonomously that matches offers to orders. There are two kinds of invoices: buying and selling.
 
@@ -30,7 +30,7 @@ The Swopblock invoicing grammar is the grammar for a kind of message that specif
 ![Invoicing](AutoInvoice.md)
 
 
-# Swopblock Delivery Grammar
+# Delivery Grammar
 
 The Swopblock changing grammar is the grammar for a kind of message that specifies a change made autonomously that fulfills invoice offers and orders. There are two kinds of deliveries: paying and cashing.
 
@@ -41,7 +41,7 @@ The Swopblock changing grammar is the grammar for a kind of message that specifi
 ![Delivering](AutoDeliver.md)
 
 
-# Swopblock Confirmation Grammar
+# Confirmation Grammar
 
 The Swopblock confirming grammar is the grammar for a kind of message that specifies a confirmation made autonomously that confirms a paying or cashing change that finalizes a Swopblock transaction. There are two kinds of confirmations: expense and receipt.
 
