@@ -1,0 +1,401 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+      <meta name="generator" content="Railroad Diagram Generator 2.0" />
+      <style type="text/css">
+    ::-moz-selection
+    {
+      color: #F0FFF0;
+      background: #000F00;
+    }
+    ::selection
+    {
+      color: #F0FFF0;
+      background: #000F00;
+    }
+    body
+    {
+      font: normal 12px Verdana, sans-serif;
+      color: #000F00;
+      background: #F0FFF0;
+    }
+    .ebnf a
+    {
+      text-decoration: none;
+    }
+    .ebnf a:hover
+    {
+      color: #000500;
+      text-decoration: underline;
+    }
+    .signature
+    {
+      color: #008000;
+      font-size: 11px;
+      text-align: right;
+    }
+    a:link, a:visited
+    {
+      color: #000F00;
+    }
+    a:link.signature, a:visited.signature
+    {
+      color: #008000;
+    }
+    div.ebnf
+    {
+      padding: 10px;
+      background: #D1FFD1;
+      width: 992px;
+    }
+    .ebnf div
+    {
+      padding-left: 13ch;
+      text-indent: -13ch;
+    }
+    .ebnf code
+    {
+      font:12px SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+    }
+  </style><svg xmlns="http://www.w3.org/2000/svg">
+         <defs>
+            <style type="text/css">
+    @namespace "http://www.w3.org/2000/svg";
+    .line                 {fill: none; stroke: #003300; stroke-width: 1;}
+    .bold-line            {stroke: #001400; shape-rendering: crispEdges; stroke-width: 2;}
+    .thin-line            {stroke: #001F00; shape-rendering: crispEdges}
+    .filled               {fill: #003300; stroke: none;}
+    text.terminal         {font-family: Verdana, Sans-serif;
+                            font-size: 12px;
+                            fill: #001400;
+                            font-weight: bold;
+                          }
+    text.nonterminal      {font-family: Verdana, Sans-serif;
+                            font-size: 12px;
+                            fill: #001A00;
+                            font-weight: normal;
+                          }
+    text.regexp           {font-family: Verdana, Sans-serif;
+                            font-size: 12px;
+                            fill: #001F00;
+                            font-weight: normal;
+                          }
+    rect, circle, polygon {fill: #003300; stroke: #003300;}
+    rect.terminal         {fill: #4DFF4D; stroke: #003300; stroke-width: 1;}
+    rect.nonterminal      {fill: #9EFF9E; stroke: #003300; stroke-width: 1;}
+    rect.text             {fill: none; stroke: none;}
+    polygon.regexp        {fill: #C7FFC7; stroke: #003300; stroke-width: 1;}
+  </style>
+         </defs></svg></head>
+   <body>
+      <p style="font-size: 14px; font-weight:bold"><a name="Intentions">Intentions:</a></p><svg xmlns="http://www.w3.org/2000/svg" width="339" height="169">
+         <polygon points="9 17 1 13 1 21"/>
+         <polygon points="17 17 9 13 9 21"/><a xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#User" xlink:title="User">
+            <rect x="51" y="3" width="48" height="32"/>
+            <rect x="49" y="1" width="48" height="32" class="nonterminal"/>
+            <text class="nonterminal" x="59" y="21">User</text></a><a xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#Ordering" xlink:title="Ordering">
+            <rect x="119" y="3" width="74" height="32"/>
+            <rect x="117" y="1" width="74" height="32" class="nonterminal"/>
+            <text class="nonterminal" x="127" y="21">Ordering</text></a><a xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#Auto" xlink:title="Auto">
+            <rect x="51" y="47" width="48" height="32"/>
+            <rect x="49" y="45" width="48" height="32" class="nonterminal"/>
+            <text class="nonterminal" x="59" y="65">Auto</text></a><a xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#Invoicing" xlink:title="Invoicing">
+            <rect x="139" y="47" width="76" height="32"/>
+            <rect x="137" y="45" width="76" height="32" class="nonterminal"/>
+            <text class="nonterminal" x="147" y="65">Invoicing</text></a><a xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#Changing" xlink:title="Changing">
+            <rect x="139" y="91" width="80" height="32"/>
+            <rect x="137" y="89" width="80" height="32" class="nonterminal"/>
+            <text class="nonterminal" x="147" y="109">Changing</text></a><a xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#Confirming" xlink:title="Confirming">
+            <rect x="139" y="135" width="88" height="32"/>
+            <rect x="137" y="133" width="88" height="32" class="nonterminal"/>
+            <text class="nonterminal" x="147" y="153">Confirming</text></a><rect x="267" y="47" width="24" height="32" rx="10"/>
+         <rect x="265" y="45" width="24" height="32" class="terminal" rx="10"/>
+         <text class="terminal" x="275" y="65">.</text>
+         <path class="line" d="m17 17 h2 m20 0 h10 m48 0 h10 m0 0 h10 m74 0 h10 m0 0 h98 m-280 0 h20 m260 0 h20 m-300 0 q10 0 10 10 m280 0 q0 -10 10 -10 m-290 10 v24 m280 0 v-24 m-280 24 q0 10 10 10 m260 0 q10 0 10 -10 m-270 10 h10 m48 0 h10 m20 0 h10 m76 0 h10 m0 0 h12 m-128 0 h20 m108 0 h20 m-148 0 q10 0 10 10 m128 0 q0 -10 10 -10 m-138 10 v24 m128 0 v-24 m-128 24 q0 10 10 10 m108 0 q10 0 10 -10 m-118 10 h10 m80 0 h10 m0 0 h8 m-118 -10 v20 m128 0 v-20 m-128 20 v24 m128 0 v-24 m-128 24 q0 10 10 10 m108 0 q10 0 10 -10 m-118 10 h10 m88 0 h10 m20 -88 h10 m24 0 h10 m23 -44 h-3"/>
+         <polygon points="329 17 337 13 337 21"/>
+         <polygon points="329 17 321 13 321 21"/></svg><p>
+         <div class="ebnf"><code>
+               <div><a href="#Intentions" title="Intentions">Intentions</a></div>
+               <div>         ::= <a href="#User" title="User">User</a> <a href="#Ordering" title="Ordering">Ordering</a></div>
+               <div>           | <a href="#Auto" title="Auto">Auto</a> ( <a href="#Invoicing" title="Invoicing">Invoicing</a> | <a href="#Changing" title="Changing">Changing</a> | <a href="#Confirming" title="Confirming">Confirming</a> ) '.'</div></code></div>
+      </p>
+      <p>no references</p><br /><p style="font-size: 14px; font-weight:bold"><a name="User">User:</a></p><svg xmlns="http://www.w3.org/2000/svg" width="113" height="37">
+         <polygon points="9 17 1 13 1 21"/>
+         <polygon points="17 17 9 13 9 21"/>
+         <rect x="31" y="3" width="54" height="32" rx="10"/>
+         <rect x="29" y="1" width="54" height="32" class="terminal" rx="10"/>
+         <text class="terminal" x="39" y="21">I am </text>
+         <path class="line" d="m17 17 h2 m0 0 h10 m54 0 h10 m3 0 h-3"/>
+         <polygon points="103 17 111 13 111 21"/>
+         <polygon points="103 17 95 13 95 21"/></svg><p>
+         <div class="ebnf"><code>
+               <div><a href="#User" title="User">User</a>     ::= 'I am '</div></code></div>
+      </p>
+      <p>referenced by:
+         <ul>
+            <li><a href="#Intentions" title="Intentions">Intentions</a></li>
+         </ul>
+      </p><br /><p style="font-size: 14px; font-weight:bold"><a name="Ordering">Ordering:</a></p><svg xmlns="http://www.w3.org/2000/svg" width="379" height="81">
+         <polygon points="9 17 1 13 1 21"/>
+         <polygon points="17 17 9 13 9 21"/><a xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#Bidding" xlink:title="Bidding">
+            <rect x="51" y="3" width="66" height="32"/>
+            <rect x="49" y="1" width="66" height="32" class="nonterminal"/>
+            <text class="nonterminal" x="59" y="21">Bidding</text></a><a xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#Asking" xlink:title="Asking">
+            <rect x="51" y="47" width="62" height="32"/>
+            <rect x="49" y="45" width="62" height="32" class="nonterminal"/>
+            <text class="nonterminal" x="59" y="65">Asking</text></a><a xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#Experiation" xlink:title="Experiation">
+            <rect x="157" y="3" width="92" height="32"/>
+            <rect x="155" y="1" width="92" height="32" class="nonterminal"/>
+            <text class="nonterminal" x="165" y="21">Experiation</text></a><a xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#Signature" xlink:title="Signature">
+            <rect x="269" y="3" width="82" height="32"/>
+            <rect x="267" y="1" width="82" height="32" class="nonterminal"/>
+            <text class="nonterminal" x="277" y="21">Signature</text></a><path class="line" d="m17 17 h2 m20 0 h10 m66 0 h10 m-106 0 h20 m86 0 h20 m-126 0 q10 0 10 10 m106 0 q0 -10 10 -10 m-116 10 v24 m106 0 v-24 m-106 24 q0 10 10 10 m86 0 q10 0 10 -10 m-96 10 h10 m62 0 h10 m0 0 h4 m20 -44 h10 m92 0 h10 m0 0 h10 m82 0 h10 m3 0 h-3"/>
+         <polygon points="369 17 377 13 377 21"/>
+         <polygon points="369 17 361 13 361 21"/></svg><p>
+         <div class="ebnf"><code>
+               <div><a href="#Ordering" title="Ordering">Ordering</a> ::= ( <a href="#Bidding" title="Bidding">Bidding</a> | <a href="#Asking" title="Asking">Asking</a> ) <a href="#Experiation" title="Experiation">Experiation</a> <a href="#Signature" title="Signature">Signature</a></div></code></div>
+      </p>
+      <p>referenced by:
+         <ul>
+            <li><a href="#Intentions" title="Intentions">Intentions</a></li>
+         </ul>
+      </p><br /><p style="font-size: 14px; font-weight:bold"><a name="Bidding">Bidding:</a></p><svg xmlns="http://www.w3.org/2000/svg" width="403" height="37">
+         <polygon points="9 17 1 13 1 21"/>
+         <polygon points="17 17 9 13 9 21"/>
+         <rect x="31" y="3" width="74" height="32" rx="10"/>
+         <rect x="29" y="1" width="74" height="32" class="terminal" rx="10"/>
+         <text class="terminal" x="39" y="21">bidding </text><a xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#Offer" xlink:title="Offer">
+            <rect x="125" y="3" width="50" height="32"/>
+            <rect x="123" y="1" width="50" height="32" class="nonterminal"/>
+            <text class="nonterminal" x="133" y="21">Offer</text></a><rect x="195" y="3" width="104" height="32" rx="10"/>
+         <rect x="193" y="1" width="104" height="32" class="terminal" rx="10"/>
+         <text class="terminal" x="203" y="21"> in order for </text><a xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#Order" xlink:title="Order">
+            <rect x="319" y="3" width="56" height="32"/>
+            <rect x="317" y="1" width="56" height="32" class="nonterminal"/>
+            <text class="nonterminal" x="327" y="21">Order</text></a><path class="line" d="m17 17 h2 m0 0 h10 m74 0 h10 m0 0 h10 m50 0 h10 m0 0 h10 m104 0 h10 m0 0 h10 m56 0 h10 m3 0 h-3"/>
+         <polygon points="393 17 401 13 401 21"/>
+         <polygon points="393 17 385 13 385 21"/></svg><p>
+         <div class="ebnf"><code>
+               <div><a href="#Bidding" title="Bidding">Bidding</a>  ::= 'bidding ' <a href="#Offer" title="Offer">Offer</a> ' in order for ' <a href="#Order" title="Order">Order</a></div></code></div>
+      </p>
+      <p>referenced by:
+         <ul>
+            <li><a href="#Ordering" title="Ordering">Ordering</a></li>
+         </ul>
+      </p><br /><p style="font-size: 14px; font-weight:bold"><a name="Asking">Asking:</a></p><svg xmlns="http://www.w3.org/2000/svg" width="397" height="37">
+         <polygon points="9 17 1 13 1 21"/>
+         <polygon points="17 17 9 13 9 21"/>
+         <rect x="31" y="3" width="68" height="32" rx="10"/>
+         <rect x="29" y="1" width="68" height="32" class="terminal" rx="10"/>
+         <text class="terminal" x="39" y="21">asking </text><a xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#Order" xlink:title="Order">
+            <rect x="119" y="3" width="56" height="32"/>
+            <rect x="117" y="1" width="56" height="32" class="nonterminal"/>
+            <text class="nonterminal" x="127" y="21">Order</text></a><rect x="195" y="3" width="104" height="32" rx="10"/>
+         <rect x="193" y="1" width="104" height="32" class="terminal" rx="10"/>
+         <text class="terminal" x="203" y="21"> in order for </text><a xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#Offer" xlink:title="Offer">
+            <rect x="319" y="3" width="50" height="32"/>
+            <rect x="317" y="1" width="50" height="32" class="nonterminal"/>
+            <text class="nonterminal" x="327" y="21">Offer</text></a><path class="line" d="m17 17 h2 m0 0 h10 m68 0 h10 m0 0 h10 m56 0 h10 m0 0 h10 m104 0 h10 m0 0 h10 m50 0 h10 m3 0 h-3"/>
+         <polygon points="387 17 395 13 395 21"/>
+         <polygon points="387 17 379 13 379 21"/></svg><p>
+         <div class="ebnf"><code>
+               <div><a href="#Asking" title="Asking">Asking</a>   ::= 'asking ' <a href="#Order" title="Order">Order</a> ' in order for ' <a href="#Offer" title="Offer">Offer</a></div></code></div>
+      </p>
+      <p>referenced by:
+         <ul>
+            <li><a href="#Ordering" title="Ordering">Ordering</a></li>
+         </ul>
+      </p><br /><p style="font-size: 14px; font-weight:bold"><a name="Experiation">Experiation:</a></p><svg xmlns="http://www.w3.org/2000/svg" width="547" height="37">
+         <polygon points="9 17 1 13 1 21"/>
+         <polygon points="17 17 9 13 9 21"/>
+         <rect x="31" y="3" width="400" height="32" rx="10"/>
+         <rect x="29" y="1" width="400" height="32" class="terminal" rx="10"/>
+         <text class="terminal" x="39" y="21"> and the order is good when the market volume reaches </text><a xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#Amount" xlink:title="Amount">
+            <rect x="451" y="3" width="68" height="32"/>
+            <rect x="449" y="1" width="68" height="32" class="nonterminal"/>
+            <text class="nonterminal" x="459" y="21">Amount</text></a><path class="line" d="m17 17 h2 m0 0 h10 m400 0 h10 m0 0 h10 m68 0 h10 m3 0 h-3"/>
+         <polygon points="537 17 545 13 545 21"/>
+         <polygon points="537 17 529 13 529 21"/></svg><p>
+         <div class="ebnf"><code>
+               <div><a href="#Experiation" title="Experiation">Experiation</a></div>
+               <div>         ::= ' and the order is good when the market volume reaches ' <a href="#Amount" title="Amount">Amount</a></div></code></div>
+      </p>
+      <p>referenced by:
+         <ul>
+            <li><a href="#Ordering" title="Ordering">Ordering</a></li>
+         </ul>
+      </p><br /><p style="font-size: 14px; font-weight:bold"><a name="Signature">Signature:</a></p><svg xmlns="http://www.w3.org/2000/svg" width="343" height="37">
+         <polygon points="9 17 1 13 1 21"/>
+         <polygon points="17 17 9 13 9 21"/>
+         <rect x="31" y="3" width="158" height="32" rx="10"/>
+         <rect x="29" y="1" width="158" height="32" class="terminal" rx="10"/>
+         <text class="terminal" x="39" y="21"> using the signature </text><a xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#AlphaNumeric" xlink:title="AlphaNumeric">
+            <rect x="209" y="3" width="106" height="32"/>
+            <rect x="207" y="1" width="106" height="32" class="nonterminal"/>
+            <text class="nonterminal" x="217" y="21">AlphaNumeric</text></a><path class="line" d="m17 17 h2 m0 0 h10 m158 0 h10 m0 0 h10 m106 0 h10 m3 0 h-3"/>
+         <polygon points="333 17 341 13 341 21"/>
+         <polygon points="333 17 325 13 325 21"/></svg><p>
+         <div class="ebnf"><code>
+               <div><a href="#Signature" title="Signature">Signature</a></div>
+               <div>         ::= ' using the signature ' <a href="#AlphaNumeric" title="AlphaNumeric">AlphaNumeric</a></div></code></div>
+      </p>
+      <p>referenced by:
+         <ul>
+            <li><a href="#Ordering" title="Ordering">Ordering</a></li>
+         </ul>
+      </p><br /><p style="font-size: 14px; font-weight:bold"><a name="Offer">Offer:</a></p><svg xmlns="http://www.w3.org/2000/svg" width="301" height="37">
+         <polygon points="9 17 1 13 1 21"/>
+         <polygon points="17 17 9 13 9 21"/><a xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#Amount" xlink:title="Amount">
+            <rect x="31" y="3" width="68" height="32"/>
+            <rect x="29" y="1" width="68" height="32" class="nonterminal"/>
+            <text class="nonterminal" x="39" y="21">Amount</text></a><rect x="119" y="3" width="64" height="32" rx="10"/>
+         <rect x="117" y="1" width="64" height="32" class="terminal" rx="10"/>
+         <text class="terminal" x="127" y="21"> using </text><a xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#Address" xlink:title="Address">
+            <rect x="203" y="3" width="70" height="32"/>
+            <rect x="201" y="1" width="70" height="32" class="nonterminal"/>
+            <text class="nonterminal" x="211" y="21">Address</text></a><path class="line" d="m17 17 h2 m0 0 h10 m68 0 h10 m0 0 h10 m64 0 h10 m0 0 h10 m70 0 h10 m3 0 h-3"/>
+         <polygon points="291 17 299 13 299 21"/>
+         <polygon points="291 17 283 13 283 21"/></svg><p>
+         <div class="ebnf"><code>
+               <div><a href="#Offer" title="Offer">Offer</a>    ::= <a href="#Amount" title="Amount">Amount</a> ' using ' <a href="#Address" title="Address">Address</a></div></code></div>
+      </p>
+      <p>referenced by:
+         <ul>
+            <li><a href="#Asking" title="Asking">Asking</a></li>
+            <li><a href="#Bidding" title="Bidding">Bidding</a></li>
+         </ul>
+      </p><br /><p style="font-size: 14px; font-weight:bold"><a name="Order">Order:</a></p><svg xmlns="http://www.w3.org/2000/svg" width="293" height="37">
+         <polygon points="9 17 1 13 1 21"/>
+         <polygon points="17 17 9 13 9 21"/><a xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#Amount" xlink:title="Amount">
+            <rect x="31" y="3" width="68" height="32"/>
+            <rect x="29" y="1" width="68" height="32" class="nonterminal"/>
+            <text class="nonterminal" x="39" y="21">Amount</text></a><rect x="119" y="3" width="64" height="32" rx="10"/>
+         <rect x="117" y="1" width="64" height="32" class="terminal" rx="10"/>
+         <text class="terminal" x="127" y="21"> using </text><a xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#Market" xlink:title="Market">
+            <rect x="203" y="3" width="62" height="32"/>
+            <rect x="201" y="1" width="62" height="32" class="nonterminal"/>
+            <text class="nonterminal" x="211" y="21">Market</text></a><path class="line" d="m17 17 h2 m0 0 h10 m68 0 h10 m0 0 h10 m64 0 h10 m0 0 h10 m62 0 h10 m3 0 h-3"/>
+         <polygon points="283 17 291 13 291 21"/>
+         <polygon points="283 17 275 13 275 21"/></svg><p>
+         <div class="ebnf"><code>
+               <div><a href="#Order" title="Order">Order</a>    ::= <a href="#Amount" title="Amount">Amount</a> ' using ' <a href="#Market" title="Market">Market</a></div></code></div>
+      </p>
+      <p>referenced by:
+         <ul>
+            <li><a href="#Asking" title="Asking">Asking</a></li>
+            <li><a href="#Bidding" title="Bidding">Bidding</a></li>
+         </ul>
+      </p><br /><p style="font-size: 14px; font-weight:bold"><a name="Amount">Amount:</a></p><svg xmlns="http://www.w3.org/2000/svg" width="517" height="37">
+         <polygon points="9 17 1 13 1 21"/>
+         <polygon points="17 17 9 13 9 21"/>
+         <rect x="31" y="3" width="78" height="32" rx="10"/>
+         <rect x="29" y="1" width="78" height="32" class="terminal" rx="10"/>
+         <text class="terminal" x="39" y="21"> at least </text><a xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#Numeric" xlink:title="Numeric">
+            <rect x="129" y="3" width="70" height="32"/>
+            <rect x="127" y="1" width="70" height="32" class="nonterminal"/>
+            <text class="nonterminal" x="137" y="21">Numeric</text></a><rect x="219" y="3" width="108" height="32" rx="10"/>
+         <rect x="217" y="1" width="108" height="32" class="terminal" rx="10"/>
+         <text class="terminal" x="227" y="21"> and at most </text><a xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#Numeric" xlink:title="Numeric">
+            <rect x="347" y="3" width="70" height="32"/>
+            <rect x="345" y="1" width="70" height="32" class="nonterminal"/>
+            <text class="nonterminal" x="355" y="21">Numeric</text></a><a xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#Units" xlink:title="Units">
+            <rect x="437" y="3" width="52" height="32"/>
+            <rect x="435" y="1" width="52" height="32" class="nonterminal"/>
+            <text class="nonterminal" x="445" y="21">Units</text></a><path class="line" d="m17 17 h2 m0 0 h10 m78 0 h10 m0 0 h10 m70 0 h10 m0 0 h10 m108 0 h10 m0 0 h10 m70 0 h10 m0 0 h10 m52 0 h10 m3 0 h-3"/>
+         <polygon points="507 17 515 13 515 21"/>
+         <polygon points="507 17 499 13 499 21"/></svg><p>
+         <div class="ebnf"><code>
+               <div><a href="#Amount" title="Amount">Amount</a>   ::= ' at least ' <a href="#Numeric" title="Numeric">Numeric</a> ' and at most ' <a href="#Numeric" title="Numeric">Numeric</a> <a href="#Units" title="Units">Units</a></div></code></div>
+      </p>
+      <p>referenced by:
+         <ul>
+            <li><a href="#Experiation" title="Experiation">Experiation</a></li>
+            <li><a href="#Offer" title="Offer">Offer</a></li>
+            <li><a href="#Order" title="Order">Order</a></li>
+         </ul>
+      </p><br /><p style="font-size: 14px; font-weight:bold"><a name="Address">Address:</a></p><svg xmlns="http://www.w3.org/2000/svg" width="407" height="37">
+         <polygon points="9 17 1 13 1 21"/>
+         <polygon points="17 17 9 13 9 21"/>
+         <rect x="31" y="3" width="50" height="32" rx="10"/>
+         <rect x="29" y="1" width="50" height="32" class="terminal" rx="10"/>
+         <text class="terminal" x="39" y="21"> the </text><a xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#Units" xlink:title="Units">
+            <rect x="101" y="3" width="52" height="32"/>
+            <rect x="99" y="1" width="52" height="32" class="nonterminal"/>
+            <text class="nonterminal" x="109" y="21">Units</text></a><rect x="173" y="3" width="80" height="32" rx="10"/>
+         <rect x="171" y="1" width="80" height="32" class="terminal" rx="10"/>
+         <text class="terminal" x="181" y="21"> address </text><a xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#AlphaNumeric" xlink:title="AlphaNumeric">
+            <rect x="273" y="3" width="106" height="32"/>
+            <rect x="271" y="1" width="106" height="32" class="nonterminal"/>
+            <text class="nonterminal" x="281" y="21">AlphaNumeric</text></a><path class="line" d="m17 17 h2 m0 0 h10 m50 0 h10 m0 0 h10 m52 0 h10 m0 0 h10 m80 0 h10 m0 0 h10 m106 0 h10 m3 0 h-3"/>
+         <polygon points="397 17 405 13 405 21"/>
+         <polygon points="397 17 389 13 389 21"/></svg><p>
+         <div class="ebnf"><code>
+               <div><a href="#Address" title="Address">Address</a>  ::= ' the ' <a href="#Units" title="Units">Units</a> ' address ' <a href="#AlphaNumeric" title="AlphaNumeric">AlphaNumeric</a></div></code></div>
+      </p>
+      <p>referenced by:
+         <ul>
+            <li><a href="#Offer" title="Offer">Offer</a></li>
+         </ul>
+      </p><br /><p style="font-size: 14px; font-weight:bold"><a name="Market">Market:</a></p><svg xmlns="http://www.w3.org/2000/svg" width="161" height="37">
+         <polygon points="9 17 1 13 1 21"/>
+         <polygon points="17 17 9 13 9 21"/>
+         <rect x="31" y="3" width="102" height="32" rx="10"/>
+         <rect x="29" y="1" width="102" height="32" class="terminal" rx="10"/>
+         <text class="terminal" x="39" y="21"> the market </text>
+         <path class="line" d="m17 17 h2 m0 0 h10 m102 0 h10 m3 0 h-3"/>
+         <polygon points="151 17 159 13 159 21"/>
+         <polygon points="151 17 143 13 143 21"/></svg><p>
+         <div class="ebnf"><code>
+               <div><a href="#Market" title="Market">Market</a>   ::= ' the market '</div></code></div>
+      </p>
+      <p>referenced by:
+         <ul>
+            <li><a href="#Order" title="Order">Order</a></li>
+         </ul>
+      </p><br /><p style="font-size: 14px; font-weight:bold"><a name="Units">Units:</a></p><svg xmlns="http://www.w3.org/2000/svg" width="169" height="125">
+         <polygon points="9 17 1 13 1 21"/>
+         <polygon points="17 17 9 13 9 21"/>
+         <rect x="51" y="3" width="46" height="32" rx="10"/>
+         <rect x="49" y="1" width="46" height="32" class="terminal" rx="10"/>
+         <text class="terminal" x="59" y="21">BTC</text>
+         <rect x="51" y="47" width="46" height="32" rx="10"/>
+         <rect x="49" y="45" width="46" height="32" class="terminal" rx="10"/>
+         <text class="terminal" x="59" y="65">ETH</text>
+         <rect x="51" y="91" width="70" height="32" rx="10"/>
+         <rect x="49" y="89" width="70" height="32" class="terminal" rx="10"/>
+         <text class="terminal" x="59" y="109">SWOBL</text>
+         <path class="line" d="m17 17 h2 m20 0 h10 m46 0 h10 m0 0 h24 m-110 0 h20 m90 0 h20 m-130 0 q10 0 10 10 m110 0 q0 -10 10 -10 m-120 10 v24 m110 0 v-24 m-110 24 q0 10 10 10 m90 0 q10 0 10 -10 m-100 10 h10 m46 0 h10 m0 0 h24 m-100 -10 v20 m110 0 v-20 m-110 20 v24 m110 0 v-24 m-110 24 q0 10 10 10 m90 0 q10 0 10 -10 m-100 10 h10 m70 0 h10 m23 -88 h-3"/>
+         <polygon points="159 17 167 13 167 21"/>
+         <polygon points="159 17 151 13 151 21"/></svg><p>
+         <div class="ebnf"><code>
+               <div><a href="#Units" title="Units">Units</a>    ::= 'BTC'</div>
+               <div>           | 'ETH'</div>
+               <div>           | 'SWOBL'</div></code></div>
+      </p>
+      <p>referenced by:
+         <ul>
+            <li><a href="#Address" title="Address">Address</a></li>
+            <li><a href="#Amount" title="Amount">Amount</a></li>
+         </ul>
+      </p><br /><hr />
+      <p>
+         <table border="0" class="signature">
+            <tr>
+               <td style="width: 100%"> </td>
+               <td valign="top">
+                  <nobr class="signature">... generated by <a name="Railroad-Diagram-Generator" class="signature" title="https://bottlecaps.de/rr/ui" href="https://bottlecaps.de/rr/ui" target="_blank">RR - Railroad Diagram Generator</a></nobr>
+               </td>
+               <td><a name="Railroad-Diagram-Generator" title="https://bottlecaps.de/rr/ui" href="https://bottlecaps.de/rr/ui" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                        <g transform="scale(0.178)">
+                           <circle cx="45" cy="45" r="45" style="stroke:none; fill:#FFCC00"/>
+                           <circle cx="45" cy="45" r="42" style="stroke:#332900; stroke-width:2px; fill:#FFCC00"/>
+                           <line x1="15" y1="15" x2="75" y2="75" stroke="#332900" style="stroke-width:9px;"/>
+                           <line x1="15" y1="75" x2="75" y2="15" stroke="#332900" style="stroke-width:9px;"/>
+                           <text x="7" y="54" style="font-size:26px; font-family:Arial, Sans-serif; font-weight:bold; fill: #332900">R</text>
+                           <text x="64" y="54" style="font-size:26px; font-family:Arial, Sans-serif; font-weight:bold; fill: #332900">R</text>
+                        </g></svg></a></td>
+            </tr>
+         </table>
+      </p>
+   </body>
+</html>
