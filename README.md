@@ -17,7 +17,7 @@ The Swopblock ordering grammar is the grammar for a message that specifies an or
 
 ![Ordering](diagram/Ordering.svg)
 
-![Ordering](Ordering.md)
+![Ordering](UserOrder.md)
 
 
 # Swopblock Invoice Grammar
@@ -28,7 +28,7 @@ The Swopblock invoicing grammar is the grammar for a kind of message that specif
 
 ![Invoicing](diagram/Invoicing.svg)
 
-![Invoicing](Invoicing.md)
+![Invoicing](AutoInvoice.md)
 
 
 # Swopblock Deliver Grammar
@@ -39,7 +39,7 @@ The Swopblock changing grammar is the grammar for a kind of message that specifi
 
 ![Delivering](diagram/Delivering.svg)
 
-![Delivering](Delivering.md)
+![Delivering](AutoDeliver.md)
 
 
 # Swopblock Confirm Grammar
@@ -50,7 +50,7 @@ The Swopblock confirming grammar is the grammar for a kind of message that speci
 
 ![Confirming](diagram/Confirming.svg)
 
-![Confirming](Confirming.md)
+![Confirming](AutoConfirm.md)
 
 
 ## 
