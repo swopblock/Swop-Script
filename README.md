@@ -4,7 +4,7 @@ The Swopblock action grammar is a grammar for messages that specify four kinds o
 
 **Intentions:**
 
-![Intentions](diagram/Intentions.md)
+![Intentions](diagram/Intentions.svg)
 
 **Actions:**
 
