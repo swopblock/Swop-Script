@@ -5,7 +5,7 @@
 ```
 Intentions
          ::= User Ordering
-           | Auto ( Invoicing | Changing | Confirming ) '.'
+           | Auto ( Invoicing | Delivering | Confirming ) '.'
 ```
 
 **Auto:**
