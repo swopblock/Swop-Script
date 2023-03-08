@@ -1,4 +1,4 @@
-**TransactingMessages:**
+**Intentions:**
 
 ![TransactingMessages](diagram/TransactingMessages.svg)
 
