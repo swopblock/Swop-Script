@@ -3,7 +3,7 @@
 ![TransactingMessages](diagram/TransactingMessages.svg)
 
 ```
-TransactingMessages
+Intentions
          ::= Transacting '.' EndOfLine
 ```
 
