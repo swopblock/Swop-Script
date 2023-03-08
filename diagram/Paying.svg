@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="397" height="37">
+<svg xmlns="http://www.w3.org/2000/svg" width="495" height="37">
    <defs>
       <style type="text/css">
     @namespace "http://www.w3.org/2000/svg";
@@ -38,31 +38,31 @@
           height="32"
           class="terminal"
           rx="10"/>
-   <text class="terminal" x="39" y="21">paying </text>
+   <text class="terminal" x="39" y="21"> paying</text>
    <a xmlns:xlink="http://www.w3.org/1999/xlink"
-       xlink:href="#Cash"
-       xlink:title="Cash">
-      <rect x="119" y="3" width="52" height="32"/>
-      <rect x="117" y="1" width="52" height="32" class="nonterminal"/>
-      <text class="nonterminal" x="127" y="21">Cash</text>
+       xlink:href="#Offer"
+       xlink:title="Offer">
+      <rect x="119" y="3" width="50" height="32"/>
+      <rect x="117" y="1" width="50" height="32" class="nonterminal"/>
+      <text class="nonterminal" x="127" y="21">Offer</text>
    </a>
-   <rect x="191" y="3" width="104" height="32" rx="10"/>
-   <rect x="189"
+   <rect x="189" y="3" width="208" height="32" rx="10"/>
+   <rect x="187"
           y="1"
-          width="104"
+          width="208"
           height="32"
           class="terminal"
           rx="10"/>
-   <text class="terminal" x="199" y="21"> in order for </text>
+   <text class="terminal" x="197" y="21"> with execution to receipt in</text>
    <a xmlns:xlink="http://www.w3.org/1999/xlink"
-       xlink:href="#Asset"
-       xlink:title="Asset">
-      <rect x="315" y="3" width="54" height="32"/>
-      <rect x="313" y="1" width="54" height="32" class="nonterminal"/>
-      <text class="nonterminal" x="323" y="21">Asset</text>
+       xlink:href="#Item"
+       xlink:title="Item">
+      <rect x="417" y="3" width="50" height="32"/>
+      <rect x="415" y="1" width="50" height="32" class="nonterminal"/>
+      <text class="nonterminal" x="425" y="21">Item</text>
    </a>
    <path class="line"
-          d="m17 17 h2 m0 0 h10 m68 0 h10 m0 0 h10 m52 0 h10 m0 0 h10 m104 0 h10 m0 0 h10 m54 0 h10 m3 0 h-3"/>
-   <polygon points="387 17 395 13 395 21"/>
-   <polygon points="387 17 379 13 379 21"/>
+          d="m17 17 h2 m0 0 h10 m68 0 h10 m0 0 h10 m50 0 h10 m0 0 h10 m208 0 h10 m0 0 h10 m50 0 h10 m3 0 h-3"/>
+   <polygon points="485 17 493 13 493 21"/>
+   <polygon points="485 17 477 13 477 21"/>
 </svg>
