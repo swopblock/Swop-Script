@@ -1,4 +1,4 @@
-TransactingMessages ::= Transacting '.' EndOfLine
+Intentions ::= Transacting '.' EndOfLine
 
 Transacting ::= Actors Actions Signature
 
