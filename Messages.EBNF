@@ -1,0 +1,81 @@
+TransactingMessages ::= Transacting '.' EndOfLine
+
+Transacting ::= Actors Actions Signature
+
+Actors ::= (User | Auto)
+
+Actions ::= (Ordering | Invoicing | Delivering | Confirming)
+
+Signature ::= ' commiting by signature ' AlfaNumeric
+
+
+User ::= 'I am'
+
+Auto ::= 'We are'
+
+
+Ordering ::= (Bidding | Asking) Reservation
+
+Invoicing ::= (Buying | Selling) Expiration 
+
+Delivering ::= (Paying | Cashing) Execution 
+
+Confirming ::= (Expensing | Receipting) Confirmation 
+
+
+Bidding ::= ' bidding' Offer ' with reservation to buy in' MarketItem
+
+Asking ::= ' asking' MarketOffer ' with reservation to sell out' Item
+
+Reservation ::= ' and the order is good when the market volume reaches' Volume
+
+
+Buying ::= ' buying' Item ' with expiration to pay out' Offer
+
+Selling ::= ' selling' Item ' with expiration to cash in' Offer
+
+Expiration ::= ' and the invoice is good when the market volume reaches' Volume
+
+
+Paying ::= ' paying' Offer ' with execution to receipt in' Item
+
+Cashing ::= ' cashing' Item ' with execution to expense out' Offer
+
+Execution ::= ' and the delivery is good when the market volume reaches' Volume
+
+
+Expensing ::= ' expensing' Offer ' with confirmation of receipt of' Item
+
+Receipting ::= ' receipting' Item ' with confirmation of expense of' Offer
+
+Confirmation ::= ' and the confirmation is good at the market volume of ' Exactly KindOf
+
+
+Offer ::=  Amounts KindOfOffer Address
+
+MarketOffer ::= Amounts KindOfOffer ' from the market'
+
+Item ::= Amounts KindOfItem Address
+
+MarketItem ::= Amounts KindOfItem ' from the market'
+
+
+Amounts ::= (Any | Exactly | AtLeast | AtMost | Range)
+
+KindOf ::= KindOfOffer | KindOfItem
+
+KindOfOffer ::= ' SWOBL'
+
+KindOfItem ::= ' BTC' | ' ETH'
+
+Address ::= ' from the address ' AlfaNumeric
+
+Any ::= ' any amount of'
+
+Exactly ::= ' exactly ' Number
+
+AtLeast ::= ' at least ' Number
+
+AtMost ::= ' at most ' Number
+
+Range ::= ' at least ' Number ' and at most ' Number
