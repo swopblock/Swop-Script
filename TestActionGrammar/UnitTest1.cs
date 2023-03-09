@@ -7,7 +7,7 @@ namespace TestActionGrammar
         [Fact]
         public void TestActionEndsWith()
         {
-            var action = new Actions();
+            var action = new ActionsOld();
 
             string message = action.Text;
 
@@ -159,5 +159,265 @@ namespace TestActionGrammar
 
             Assert.True(message.EndsWith("."));
         }
+    }
+    public class Intentions
+    {
+        public Transacting Transacting;
+        public string Text
+        {
+            get
+            {
+                return $"{Transacting.Text}.\n";
+            }
+        }
+    }
+
+
+    public class Transacting
+    {
+        public Actors Actor;
+
+        public Actions Action;
+
+        public Signature Signature;
+
+        public string Text
+        {
+            get
+            {
+                return $"{Actor.Text} {Action.Text} {Signature.Text}";
+            }
+        }
+    }
+
+    public abstract class Actors
+    {
+        public abstract string Text { get; }
+    }
+
+    public class User : Actors
+    {
+        public override string Text
+        {
+            get
+            {
+                return "I am";
+            }
+        }
+    }
+
+    public class Auto : Actors
+    {
+        public override string Text
+        {
+            get
+            {
+                return "We are";
+            }
+        }
+    }
+
+    public abstract class Actions
+    {
+        public abstract string Text { get; }
+    }
+
+    public class Ordering : Actions
+    {
+        public Reservation Reservation;
+
+        public override string Text
+        {
+            get
+            {
+                return $" {Reservation.Text}";
+            }
+        }
+    }
+
+    public class Reservation
+    {
+        public Volume Volume;
+
+        public string Text
+        {
+            get
+            {
+                return $" and the order is good when the market volume reaches {Volume.Text}";
+            }
+        }
+    }
+
+    public class Invoicing : Actions
+    {
+        public Expiration Expiration;
+
+        public override string Text
+        {
+            get
+            {
+                return $" {Expiration.Text}";
+            }
+        }
+    }
+
+    public class Expiration
+    {
+        public Volume Volume;
+
+        public string Text { get { return $" and the invoice is good when the market volume reaches {Volume.Text}"; } }
+
+    }
+
+    public class Delivering : Actions
+    {
+        public Execution Execution;
+
+        public override string Text
+        {
+            get
+            {
+                return $"";// {Execution.Text}";
+            }
+        }
+    }
+
+    public class Execution
+    {
+        //public string Text = $" and the delivery is good when the market volume reaches {Volume.Text}";
+
+    }
+
+    public class Confirming : Actions
+    {
+        public Confirmation Confirmation;
+
+        public override string Text
+        {
+            get
+            {
+                return $"";// {Confirmation.Text}";
+            }
+        }
+    }
+
+    public class Confirmation
+    {
+        //public Exactly Exactly;
+
+        //public KindOf KindOf;
+
+        //public string Text = $" and the confirmation is good at the market volume of {Exactly.Text} {KindOf.Text}";
+    }
+
+
+
+    public class Signature
+    {
+        public string Text = " commiting by signature ";
+
+        public string AlfaNumeric;
+    }
+
+    public class Bidding : Ordering
+    {
+        //Bidding ::= ' bidding' Offer ' with reservation to buy in' MarketItem
+
+    }
+
+    public class Asking : Ordering
+    {
+        //Asking ::= ' asking' MarketOffer ' with reservation to sell out' Item
+
+    }
+
+    public class Buying : Invoicing
+    {
+
+    }
+
+    public class Selling : Invoicing
+    {
+
+    }
+
+
+    public class Paying : Delivering
+    {
+
+    }
+
+    public class Cashing : Delivering
+    {
+
+    }
+
+    public class Expensing : Confirming
+    {
+
+    }
+
+    public class Receipting : Confirming
+    {
+
+    }
+
+    public class Volume
+    {
+        public Int64 Number;
+
+        public string Text = $" TODO";
+    }
+
+
+
+
+    //Buying ::= ' buying' Item ' with expiration to pay out' Offer
+
+    //Selling ::= ' selling' Item ' with expiration to cash in' Offer
+
+
+    //Paying ::= ' paying' Offer ' with execution to receipt in' Item
+
+    //Cashing ::= ' cashing' Item ' with execution to expense out' Offer
+
+
+    //Expensing ::= ' expensing' Offer ' with confirmation of receipt of' Item
+
+    //Receipting ::= ' receipting' Item ' with confirmation of expense of' Offer
+
+
+    //Offer::= Amounts KindOfOffer Address
+
+    //MarketOffer::= Amounts KindOfOffer ' from the market'
+
+    //Item::= Amounts KindOfItem Address
+
+    //MarketItem::= Amounts KindOfItem ' from the market'
+
+
+    //Amounts::= (Any | Exactly | AtLeast | AtMost | Range)
+
+    //KindOf::= KindOfOffer | KindOfItem
+
+    //KindOfOffer::= ' SWOBL'
+
+    //KindOfItem::= ' BTC' | ' ETH'
+
+    //Address::= ' from the address ' AlfaNumeric
+
+    //Any ::= ' any amount of'
+
+    //Exactly::= ' exactly ' Number
+
+    //AtLeast ::= ' at least ' Number
+
+    //AtMost ::= ' at most ' Number
+
+    public class Range
+    {
+        public Int64 Least, Most;
+
+        public string Text { get { return $" at least {Least} and at most {Most}"; } }
     }
 }

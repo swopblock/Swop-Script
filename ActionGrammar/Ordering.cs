@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace ActionGrammar
 {
-    public class Actions
+    public class ActionsOld
     {
         public string EndPeriod = ".";
 
         public string Text { get; init; }
 
-        public Actions() 
+        public ActionsOld() 
         {
             Text = EndPeriod;
         }
     }
 
-    public class UserActions : Actions
+    public class UserActions : ActionsOld
     {
         public string StartText = "I am ";
 
@@ -30,7 +30,7 @@ namespace ActionGrammar
         }
     }
 
-    public class AutoActions : Actions
+    public class AutoActions : ActionsOld
     {
         public string StartText = "We are ";
 
