@@ -1,4 +1,5 @@
 using ActionGrammar;
+using System.Net.Sockets;
 
 namespace TestActionGrammar
 {
@@ -133,10 +134,6 @@ namespace TestActionGrammar
         }
     }
 
-
-
-
-
     public class UnitTestAutoActions
     {
         [Fact]
@@ -160,9 +157,23 @@ namespace TestActionGrammar
             Assert.True(message.EndsWith("."));
         }
     }
+
+
+    public class Test
+    {
+        [Fact]
+        public void TestIntentions()
+        {
+            var intentions = new Intentions();
+
+            var text = intentions.Text;
+
+            Assert.NotNull(intentions);
+        }
+    }
     public class Intentions
     {
-        public Transacting Transacting;
+        public Transacting Transacting = new Transacting();
         public string Text
         {
             get
@@ -175,11 +186,11 @@ namespace TestActionGrammar
 
     public class Transacting
     {
-        public Actors Actor;
+        public Actors Actor = new User();
 
-        public Actions Action;
+        public Actions Action = new Bidding();
 
-        public Signature Signature;
+        public Signature Signature = new Signature();
 
         public string Text
         {
@@ -222,9 +233,9 @@ namespace TestActionGrammar
         public abstract string Text { get; }
     }
 
-    public class Ordering : Actions
+    public abstract class Ordering : Actions
     {
-        public Reservation Reservation;
+        public Reservation Reservation = new Reservation();
 
         public override string Text
         {
@@ -237,7 +248,7 @@ namespace TestActionGrammar
 
     public class Reservation
     {
-        public Volume Volume;
+        public Volume Volume = new Volume();
 
         public string Text
         {
@@ -248,9 +259,9 @@ namespace TestActionGrammar
         }
     }
 
-    public class Invoicing : Actions
+    public abstract class Invoicing : Actions
     {
-        public Expiration Expiration;
+        public Expiration Expiration = new Expiration();
 
         public override string Text
         {
@@ -263,15 +274,15 @@ namespace TestActionGrammar
 
     public class Expiration
     {
-        public Volume Volume;
+        public Volume Volume = new Volume();
 
-        public string Text { get { return $" and the invoice is good when the market volume reaches {Volume.Text}"; } }
+        public string Text { get { return $" and the invoice is good for the market volume of {Volume.Text}"; } }
 
     }
 
-    public class Delivering : Actions
+    public abstract class Delivering : Actions
     {
-        public Execution Execution;
+        public Execution Execution = new Execution();
 
         public override string Text
         {
@@ -284,11 +295,19 @@ namespace TestActionGrammar
 
     public class Execution
     {
-        //public string Text = $" and the delivery is good when the market volume reaches {Volume.Text}";
+        public Volume Volume = new Volume();
+
+        public string Text
+        {
+            get
+            {
+                return $" and the delivery is good when the market volume reaches {Volume.Text}";
+            }
+        }
 
     }
 
-    public class Confirming : Actions
+    public abstract class Confirming : Actions
     {
         public Confirmation Confirmation;
 
@@ -321,45 +340,123 @@ namespace TestActionGrammar
 
     public class Bidding : Ordering
     {
-        //Bidding ::= ' bidding' Offer ' with reservation to buy in' MarketItem
+        public Offer Offer = new Offer();
 
+        public MarketItem MarketItem = new MarketItem();
+
+        public override string Text
+        {
+            get
+            {
+                return $"bidding {Offer.Text} with reservation to buy in {MarketItem.Text}";
+            }
+        }
     }
 
     public class Asking : Ordering
     {
-        //Asking ::= ' asking' MarketOffer ' with reservation to sell out' Item
+        public MarketOffer MarketOffer = new MarketOffer();
 
+        public Item Item = new Item();
+
+        public string Text
+        {
+            get
+            {
+                return $" asking {MarketOffer.Text} with reservation to sell out {Item.Text}";
+            }
+        }
     }
 
     public class Buying : Invoicing
     {
+        public Item Item = new Item();
 
+        public Offer Offer = new Offer();
+
+        public string Text
+        {
+            get
+            {
+                return $" buying {Item.Text} with expiration to pay out {Offer.Text}";
+            }
+        }
     }
 
     public class Selling : Invoicing
     {
+        public Item Item = new Item();
 
+        public Offer Offer = new Offer();
+
+        public string Text
+        {
+            get
+            {
+                return $" selling {Item.Text} with expiration to cash in {Offer.Text}";
+            }
+        }
     }
 
 
     public class Paying : Delivering
     {
+        public Offer Offer = new Offer();
 
+        public Item Item = new Item();
+
+        public string Text
+        {
+            get
+            {
+                return $" paying' {Offer.Text} with execution to receipt in {Item.Text}";
+            }
+        }
     }
 
     public class Cashing : Delivering
     {
+        public Offer Offer = new Offer();
 
+        public Item Item = new Item();
+
+        public string Text
+        {
+            get
+            {
+                return $" cashing {Item.Text} with execution to expense out {Offer.Text}";
+            }
+        }
     }
 
     public class Expensing : Confirming
     {
+        public Offer Offer = new Offer();
 
+        public Item Item = new Item();
+
+        public string Text
+        {
+            get
+            {
+                return $" expensing {Offer.Text} with confirmation of receipt of {Item.Text}";
+            }
+        }
     }
 
     public class Receipting : Confirming
     {
+        public Offer Offer = new Offer();
 
+        public Item Item = new Item();
+
+        public string Text
+        {
+            get
+            {
+                return $" receipting {Item.Text} with confirmation of expense of {Offer.Text}";
+            }
+        }
     }
 
     public class Volume
@@ -372,52 +469,138 @@ namespace TestActionGrammar
 
 
 
-    //Buying ::= ' buying' Item ' with expiration to pay out' Offer
 
-    //Selling ::= ' selling' Item ' with expiration to cash in' Offer
+ 
+
+ 
+ 
+
+ 
+
+    public class Offer //::= Amounts KindOfOffer Address
+    {
+        public Amounts Amount = new Range();
+
+        public KindOfOffer KindOfOffer = new KindOfOffer();
+
+        public Address Address = new Address();
+
+        public string Text 
+        { 
+            get 
+            { 
+                return $"{Amount.Text} {KindOfOffer.Text} {Address.Text}"; 
+            } 
+        }
+    }
+
+    public class MarketOffer
+    {
+        public Amounts Amount = new Range();
+
+        public KindOfOffer KindOfOffer = new KindOfOffer();
+        public string Text
+        {
+            get
+            {
+                return $" {Amount} {KindOfOffer} from the market";
+            }
+        }
+    }
+
+    public class Item
+    {
+        public Amounts Amount = new Range();
+
+        public KindOfItem KindOfItem = new KindOfItem();
+
+        public Address Address;
+
+        public string Text { get { return $"{Amount.Text} {KindOfItem.Text} {Address.Text}"; } }
+    }
+
+    public class MarketItem : Item
+    {
+        public Int64 Number;
+
+        public string Text
+        {
+            get
+            {
+                return "";// $"{Amount} {KindOfItem}";
+            }
+        }
+    }//::= Amounts KindOfItem ' from the market'
 
 
-    //Paying ::= ' paying' Offer ' with execution to receipt in' Item
+    public abstract class Amounts
+    {
+        public abstract string Text { get; }
+    }
 
-    //Cashing ::= ' cashing' Item ' with execution to expense out' Offer
+    public class KindOf
+    {
 
+    }
 
-    //Expensing ::= ' expensing' Offer ' with confirmation of receipt of' Item
+    public class KindOfOffer
+    {
+        public string Text { get { return "SWOBL"; } }
 
-    //Receipting ::= ' receipting' Item ' with confirmation of expense of' Offer
+    }
+        
+    public class KindOfItem
+    {
+        public string Text { get { return " BTC";/* | " ETH"*/} }
 
+    }
 
-    //Offer::= Amounts KindOfOffer Address
+    public class BtcItem : KindOfItem
+    {
 
-    //MarketOffer::= Amounts KindOfOffer ' from the market'
+    }
 
-    //Item::= Amounts KindOfItem Address
+    public class EthItem : KindOfItem
+    {
 
-    //MarketItem::= Amounts KindOfItem ' from the market'
+    }
+    
+    public class Address
+    {
+        public Int64 AlfaNumeric;
+        public string Text { get { return $" from the address {AlfaNumeric}"; } }
+    }
 
+    public class Any : Amounts
+    {
+        public override string Text { get { return " any amount of"; } }
+    }
 
-    //Amounts::= (Any | Exactly | AtLeast | AtMost | Range)
+    public class Exactly : Amounts
+        {
+            public Int64 Number;
 
-    //KindOf::= KindOfOffer | KindOfItem
+            public override string Text { get { return $" exactly {Number} "; } }
+        }
 
-    //KindOfOffer::= ' SWOBL'
+    public class AtLeast : Amounts
+    {
+        public Int64 Number;
 
-    //KindOfItem::= ' BTC' | ' ETH'
+        public override string Text { get { return $" at least"; } }
+    }
 
-    //Address::= ' from the address ' AlfaNumeric
+    public class AtMost : Amounts
+        {
+            public Int64 Number;
 
-    //Any ::= ' any amount of'
+            public override string Text { get { return $" at most {Number}"; } }
+        }
 
-    //Exactly::= ' exactly ' Number
-
-    //AtLeast ::= ' at least ' Number
-
-    //AtMost ::= ' at most ' Number
-
-    public class Range
+    public class Range : Amounts
     {
         public Int64 Least, Most;
 
-        public string Text { get { return $" at least {Least} and at most {Most}"; } }
+        public override string Text { get { return $" at least {Least} and at most {Most}"; } }
     }
 }
