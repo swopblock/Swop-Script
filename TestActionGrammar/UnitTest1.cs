@@ -568,39 +568,39 @@ namespace TestActionGrammar
     public class Address
     {
         public Int64 AlfaNumeric;
-        public string Text { get { return $" from the address {AlfaNumeric}"; } }
+        public string Text { get { return $"from the address {AlfaNumeric}"; } }
     }
 
     public class Any : Amounts
     {
-        public override string Text { get { return " any amount of"; } }
+        public override string Text { get { return "any amount of"; } }
     }
 
     public class Exactly : Amounts
         {
             public Int64 Number;
 
-            public override string Text { get { return $" exactly {Number} "; } }
+            public override string Text { get { return $"exactly {Number} "; } }
         }
 
     public class AtLeast : Amounts
     {
         public Int64 Number;
 
-        public override string Text { get { return $" at least"; } }
+        public override string Text { get { return $"at least"; } }
     }
 
     public class AtMost : Amounts
         {
             public Int64 Number;
 
-            public override string Text { get { return $" at most {Number}"; } }
+            public override string Text { get { return $"at most {Number}"; } }
         }
 
     public class Range : Amounts
     {
         public Int64 Least, Most;
 
-        public override string Text { get { return $" at least {Least} and at most {Most}"; } }
+        public override string Text { get { return $"at least {Least} and at most {Most}"; } }
     }
 }
