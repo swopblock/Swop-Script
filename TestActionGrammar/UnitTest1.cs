@@ -171,6 +171,51 @@ namespace TestActionGrammar
             Assert.NotNull(intentions);
         }
     }
+
+    public class TestAmounts
+    { 
+
+        [Fact]
+        public void TestAny() 
+        {
+            var any = Any.New();
+
+            Assert.Equal("any amount of", any.Text);
+        }
+
+        [Fact]
+        public void TestExactly()
+        {
+            var exactly = Exactly.New(1234567);
+
+            Assert.Equal("exactly 1234567", exactly.Text);
+        }
+
+        [Fact]
+        public void TestAtLeast()
+        {
+            var atLeast = AtLeast.New(2345678);
+
+            Assert.Equal("at least 2345678", atLeast.Text);
+
+        }
+
+        [Fact]
+        public void TestAtMost()
+        {
+            var atMost = AtMost.New(3456789);
+
+            Assert.Equal("at most 3456789", atMost.Text);
+        }
+
+        [Fact]
+        public void TestRange()
+        {
+            var range = Range.New(1, 2);
+
+            Assert.Equal("at least 1 and at most 2", range.Text);
+        }
+    }
     public class Intentions
     {
         public Transacting Transacting = new Transacting();
@@ -322,14 +367,61 @@ namespace TestActionGrammar
 
     public class Confirmation
     {
-        //public Exactly Exactly;
+        public MarketVolume MarketVolume;
 
-        //public KindOf KindOf;
+        public MarketAccount MarketAccount;
 
-        //public string Text = $" and the confirmation is good at the market volume of {Exactly.Text} {KindOf.Text}";
+        public MarketInventory MarketInventory;
+
+        public string Text
+        {
+            get
+            {
+                return $" and the confirmation is good at the market {MarketVolume}, {MarketAccount} and {MarketInventory}";
+            }
+        }
     }
 
+    public class MarketVolume
+    {
+        public Exactly Exactly;
 
+        public string Text
+        {
+            get
+            {
+                    return $"volume of {Exactly.Text} SWOBL";
+            }
+        }
+    }
+
+    public class MarketAccount
+        {
+            public Exactly Exactly;
+
+            public string Text
+            {
+                get
+                {
+                    return $"account of {Exactly.Text} SWOBL";
+                }
+            }
+        }
+
+    public class MarketInventory
+    {
+        public Exactly Exactly;
+
+        public KindOfItem KindOfItem;
+
+        public string Text
+        {
+            get
+            {
+                return $"inventory of {Exactly.Text} {KindOfItem.Text}";
+            }
+        }
+    }
 
     public class Signature
     {
@@ -350,6 +442,17 @@ namespace TestActionGrammar
             {
                 return $"bidding {Offer.Text} with reservation to buy in {MarketItem.Text}";
             }
+        }
+
+        public static Bidding New(Offer offer, MarketItem marketItem)
+        {
+            var NEW = new Bidding();
+
+            NEW.Offer = offer;
+
+            NEW.MarketItem = marketItem;
+
+            return NEW;
         }
     }
 
@@ -492,6 +595,17 @@ namespace TestActionGrammar
                 return $"{Amount.Text} {KindOfOffer.Text} {Address.Text}"; 
             } 
         }
+
+        public static Offer New(Amounts amount, KindOfOffer kindOfOffer, Address address)
+        {
+            var NEW = new Offer();
+
+            NEW.Amount = amount;
+            NEW.KindOfOffer = kindOfOffer;
+            NEW.Address = address;
+
+            return NEW;
+        }
     }
 
     public class MarketOffer
@@ -574,33 +688,75 @@ namespace TestActionGrammar
     public class Any : Amounts
     {
         public override string Text { get { return "any amount of"; } }
+
+        public static Any New()
+        { 
+            return new Any(); 
+        }
     }
 
     public class Exactly : Amounts
-        {
-            public Int64 Number;
+    {
+        public Int64 Number;
 
-            public override string Text { get { return $"exactly {Number} "; } }
+        public override string Text { get { return $"exactly {Number}"; } }
+
+        public static Exactly New(Int64 number)
+        {
+            var NEW = new Exactly();
+
+            NEW.Number = number;
+
+            return NEW;
         }
+    }
 
     public class AtLeast : Amounts
     {
         public Int64 Number;
 
-        public override string Text { get { return $"at least"; } }
+        public override string Text { get { return $"at least {Number}"; } }
+
+        public static AtLeast New(Int64 number)
+        {
+            var NEW = new AtLeast();
+
+            NEW.Number = number;
+
+            return NEW;
+        }
     }
 
     public class AtMost : Amounts
-        {
-            public Int64 Number;
+    {
+        public Int64 Number;
 
-            public override string Text { get { return $"at most {Number}"; } }
+        public override string Text { get { return $"at most {Number}"; } }
+
+        public static AtMost New(Int64 number)
+        {
+            var NEW = new AtMost();
+
+            NEW.Number = number;
+
+            return NEW;
         }
+    }
 
     public class Range : Amounts
     {
         public Int64 Least, Most;
 
         public override string Text { get { return $"at least {Least} and at most {Most}"; } }
+
+        public static Range New(Int64 least, Int64 most)
+        {
+            var NEW = new Range();
+
+            NEW.Least = least;
+            NEW.Most = most;
+
+            return NEW;
+        }
     }
 }
