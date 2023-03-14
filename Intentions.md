@@ -1,6 +1,6 @@
 **Intentions:**
 
-![TransactingMessages](diagram/TransactingMessages.svg)
+![Intentions](diagram/Intentions.svg)
 
 ```
 Intentions
@@ -18,7 +18,7 @@ Transacting
 
 referenced by:
 
-* TransactingMessages
+* Intentions
 
 **Actors:**
 
@@ -279,12 +279,51 @@ referenced by:
 
 ```
 Confirmation
-         ::= ' and the confirmation is good at the market volume of ' Exactly KindOf
+         ::= ' and the confirmation is good at the market' MarketVolume ', ' MarketAccount ' and' MarketInventory
 ```
 
 referenced by:
 
 * Confirming
+
+**MarketVolume:**
+
+![MarketVolume](diagram/MarketVolume.svg)
+
+```
+MarketVolume
+         ::= ' volume of' Exactly ' SWOBL'
+```
+
+referenced by:
+
+* Confirmation
+
+**MarketAccount:**
+
+![MarketAccount](diagram/MarketAccount.svg)
+
+```
+MarketAccount
+         ::= ' account of' Exactly ' SWOBL'
+```
+
+referenced by:
+
+* Confirmation
+
+**MarketInventory:**
+
+![MarketInventory](diagram/MarketInventory.svg)
+
+```
+MarketInventory
+         ::= ' inventory of' Exactly KindOfItem
+```
+
+referenced by:
+
+* Confirmation
 
 **Offer:**
 
@@ -376,10 +415,6 @@ KindOf   ::= KindOfOffer
            | KindOfItem
 ```
 
-referenced by:
-
-* Confirmation
-
 **KindOfOffer:**
 
 ![KindOfOffer](diagram/KindOfOffer.svg)
@@ -409,6 +444,7 @@ referenced by:
 
 * Item
 * KindOf
+* MarketInventory
 * MarketItem
 
 **Address:**
@@ -447,7 +483,9 @@ Exactly  ::= ' exactly ' Number
 referenced by:
 
 * Amounts
-* Confirmation
+* MarketAccount
+* MarketInventory
+* MarketVolume
 
 **AtLeast:**
 
