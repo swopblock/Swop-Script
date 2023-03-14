@@ -48,7 +48,16 @@ Expensing ::= ' expensing' Offer ' with confirmation of receipt of' Item
 
 Receipting ::= ' receipting' Item ' with confirmation of expense of' Offer
 
-Confirmation ::= ' and the confirmation is good at the market volume of ' Exactly KindOf
+Confirmation ::= ' and the confirmation is good at the market' MarketVolume ', ' MarketAccount ' and' MarketInventory
+ 
+/* market volume is the total amount of SWOBL confirmed since the beginning */ 
+MarketVolume ::= ' volume of' Exactly ' SWOBL'
+
+/* market account is the total amount of SWOBL on account and available as a medium of exchange */
+MarketAccount ::= ' account of' Exactly ' SWOBL'
+
+/* market inventory is the net amount of the kind item that could be available for sale */
+MarketInventory ::= ' inventory of' Exactly KindOfItem
 
 
 Offer ::=  Amounts KindOfOffer Address
