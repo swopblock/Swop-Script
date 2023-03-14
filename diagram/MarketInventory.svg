@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="301" height="37">
+<svg xmlns="http://www.w3.org/2000/svg" width="359" height="37">
    <defs>
       <style type="text/css">
     @namespace "http://www.w3.org/2000/svg";
@@ -31,30 +31,30 @@
    </defs>
    <polygon points="9 17 1 13 1 21"/>
    <polygon points="17 17 9 13 9 21"/>
-   <a xmlns:xlink="http://www.w3.org/1999/xlink"
-       xlink:href="#Transacting"
-       xlink:title="Transacting">
-      <rect x="31" y="3" width="94" height="32"/>
-      <rect x="29" y="1" width="94" height="32" class="nonterminal"/>
-      <text class="nonterminal" x="39" y="21">Transacting</text>
-   </a>
-   <rect x="145" y="3" width="24" height="32" rx="10"/>
-   <rect x="143"
+   <rect x="31" y="3" width="106" height="32" rx="10"/>
+   <rect x="29"
           y="1"
-          width="24"
+          width="106"
           height="32"
           class="terminal"
           rx="10"/>
-   <text class="terminal" x="153" y="21">.</text>
+   <text class="terminal" x="39" y="21"> inventory of</text>
    <a xmlns:xlink="http://www.w3.org/1999/xlink"
-       xlink:href="#EndOfLine"
-       xlink:title="EndOfLine">
-      <rect x="189" y="3" width="84" height="32"/>
-      <rect x="187" y="1" width="84" height="32" class="nonterminal"/>
-      <text class="nonterminal" x="197" y="21">EndOfLine</text>
+       xlink:href="#Exactly"
+       xlink:title="Exactly">
+      <rect x="157" y="3" width="64" height="32"/>
+      <rect x="155" y="1" width="64" height="32" class="nonterminal"/>
+      <text class="nonterminal" x="165" y="21">Exactly</text>
+   </a>
+   <a xmlns:xlink="http://www.w3.org/1999/xlink"
+       xlink:href="#KindOfItem"
+       xlink:title="KindOfItem">
+      <rect x="241" y="3" width="90" height="32"/>
+      <rect x="239" y="1" width="90" height="32" class="nonterminal"/>
+      <text class="nonterminal" x="249" y="21">KindOfItem</text>
    </a>
    <path class="line"
-          d="m17 17 h2 m0 0 h10 m94 0 h10 m0 0 h10 m24 0 h10 m0 0 h10 m84 0 h10 m3 0 h-3"/>
-   <polygon points="291 17 299 13 299 21"/>
-   <polygon points="291 17 283 13 283 21"/>
+          d="m17 17 h2 m0 0 h10 m106 0 h10 m0 0 h10 m64 0 h10 m0 0 h10 m90 0 h10 m3 0 h-3"/>
+   <polygon points="349 17 357 13 357 21"/>
+   <polygon points="349 17 341 13 341 21"/>
 </svg>

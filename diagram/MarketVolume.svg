@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="893" height="37">
+<svg xmlns="http://www.w3.org/2000/svg" width="327" height="37">
    <defs>
       <style type="text/css">
     @namespace "http://www.w3.org/2000/svg";
@@ -31,53 +31,31 @@
    </defs>
    <polygon points="9 17 1 13 1 21"/>
    <polygon points="17 17 9 13 9 21"/>
-   <rect x="31" y="3" width="312" height="32" rx="10"/>
+   <rect x="31" y="3" width="90" height="32" rx="10"/>
    <rect x="29"
           y="1"
-          width="312"
+          width="90"
           height="32"
           class="terminal"
           rx="10"/>
-   <text class="terminal" x="39" y="21"> and the confirmation is good at the market</text>
+   <text class="terminal" x="39" y="21"> volume of</text>
    <a xmlns:xlink="http://www.w3.org/1999/xlink"
-       xlink:href="#MarketVolume"
-       xlink:title="MarketVolume">
-      <rect x="363" y="3" width="110" height="32"/>
-      <rect x="361" y="1" width="110" height="32" class="nonterminal"/>
-      <text class="nonterminal" x="371" y="21">MarketVolume</text>
+       xlink:href="#Exactly"
+       xlink:title="Exactly">
+      <rect x="141" y="3" width="64" height="32"/>
+      <rect x="139" y="1" width="64" height="32" class="nonterminal"/>
+      <text class="nonterminal" x="149" y="21">Exactly</text>
    </a>
-   <rect x="493" y="3" width="28" height="32" rx="10"/>
-   <rect x="491"
+   <rect x="225" y="3" width="74" height="32" rx="10"/>
+   <rect x="223"
           y="1"
-          width="28"
+          width="74"
           height="32"
           class="terminal"
           rx="10"/>
-   <text class="terminal" x="501" y="21">, </text>
-   <a xmlns:xlink="http://www.w3.org/1999/xlink"
-       xlink:href="#MarketAccount"
-       xlink:title="MarketAccount">
-      <rect x="541" y="3" width="112" height="32"/>
-      <rect x="539" y="1" width="112" height="32" class="nonterminal"/>
-      <text class="nonterminal" x="549" y="21">MarketAccount</text>
-   </a>
-   <rect x="673" y="3" width="48" height="32" rx="10"/>
-   <rect x="671"
-          y="1"
-          width="48"
-          height="32"
-          class="terminal"
-          rx="10"/>
-   <text class="terminal" x="681" y="21"> and</text>
-   <a xmlns:xlink="http://www.w3.org/1999/xlink"
-       xlink:href="#MarketInventory"
-       xlink:title="MarketInventory">
-      <rect x="741" y="3" width="124" height="32"/>
-      <rect x="739" y="1" width="124" height="32" class="nonterminal"/>
-      <text class="nonterminal" x="749" y="21">MarketInventory</text>
-   </a>
+   <text class="terminal" x="233" y="21"> SWOBL</text>
    <path class="line"
-          d="m17 17 h2 m0 0 h10 m312 0 h10 m0 0 h10 m110 0 h10 m0 0 h10 m28 0 h10 m0 0 h10 m112 0 h10 m0 0 h10 m48 0 h10 m0 0 h10 m124 0 h10 m3 0 h-3"/>
-   <polygon points="883 17 891 13 891 21"/>
-   <polygon points="883 17 875 13 875 21"/>
+          d="m17 17 h2 m0 0 h10 m90 0 h10 m0 0 h10 m64 0 h10 m0 0 h10 m74 0 h10 m3 0 h-3"/>
+   <polygon points="317 17 325 13 325 21"/>
+   <polygon points="317 17 309 13 309 21"/>
 </svg>
