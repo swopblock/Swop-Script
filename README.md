@@ -1,6 +1,6 @@
-# Swopblock's Action Grammar: Intentions
+# Swop Script
 
-The Swopblock action grammar is a grammar for messages that capture the intentions of the user in four kinds of actions each in a complete English sentence that are used together to specify a complete Swopblock transaction. The four types of actions are Ordering, Invoicing, Delivering and Confirming. These actions are intentions on the part of a user in the case of Ordering and are delegated autonomous in the case of Invoicing, Delivering and Confirming. 
+Swop Script is a grammar for messages that capture the intentions of the user in four kinds of actions each in a complete English sentence that are used together to specify a complete Swopblock transaction. The four types of actions are Ordering, Invoicing, Delivering and Confirming. These actions are intentions on the part of a user in the case of Ordering and are delegated autonomous (auto) in the case of Invoicing, Delivering and Confirming. 
 
 **Intentions:**
 
