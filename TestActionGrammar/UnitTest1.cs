@@ -172,53 +172,61 @@ namespace TestActionGrammar
         }
     }
 
-    public class TestAmounts
-    { 
+    public class TestIntentions
+    {
+        //IAMHERE
+        public class TestAmounts
+        { 
 
-        [Fact]
-        public void TestAny() 
-        {
-            var any = Any.New();
+            [Fact]
+            public void TestAny() 
+            {
+                var any = Any.New();
 
-            Assert.Equal("any amount of", any.Text);
+                Assert.Equal("any amount of", any.Text);
+            }
+
+            [Fact]
+            public void TestExactly()
+            {
+                var exactly = Exactly.New(1234567);
+
+                Assert.Equal("exactly 1234567", exactly.Text);
+            }
+
+            [Fact]
+            public void TestAtLeast()
+            {
+                var atLeast = AtLeast.New(2345678);
+
+                Assert.Equal("at least 2345678", atLeast.Text);
+
+            }
+
+            [Fact]
+            public void TestAtMost()
+            {
+                var atMost = AtMost.New(3456789);
+
+                Assert.Equal("at most 3456789", atMost.Text);
+            }
+
+            [Fact]
+            public void TestRange()
+            {
+                var range = Range.New(1, 2);
+
+                Assert.Equal("at least 1 and at most 2", range.Text);
+            }
         }
 
-        [Fact]
-        public void TestExactly()
-        {
-            var exactly = Exactly.New(1234567);
 
-            Assert.Equal("exactly 1234567", exactly.Text);
-        }
-
-        [Fact]
-        public void TestAtLeast()
-        {
-            var atLeast = AtLeast.New(2345678);
-
-            Assert.Equal("at least 2345678", atLeast.Text);
-
-        }
-
-        [Fact]
-        public void TestAtMost()
-        {
-            var atMost = AtMost.New(3456789);
-
-            Assert.Equal("at most 3456789", atMost.Text);
-        }
-
-        [Fact]
-        public void TestRange()
-        {
-            var range = Range.New(1, 2);
-
-            Assert.Equal("at least 1 and at most 2", range.Text);
-        }
     }
+
     public class Intentions
     {
         public Transacting Transacting = new Transacting();
+
         public string Text
         {
             get
@@ -512,7 +520,7 @@ namespace TestActionGrammar
         {
             get
             {
-                return $" paying' {Offer.Text} with execution to receipt in {Item.Text}";
+                return $"paying {Offer.Text} with execution to receipt in {Item.Text}";
             }
         }
     }
@@ -527,7 +535,7 @@ namespace TestActionGrammar
         {
             get
             {
-                return $" cashing {Item.Text} with execution to expense out {Offer.Text}";
+                return $"cashing {Item.Text} with execution to expense out {Offer.Text}";
             }
         }
     }
@@ -542,7 +550,7 @@ namespace TestActionGrammar
         {
             get
             {
-                return $" expensing {Offer.Text} with confirmation of receipt of {Item.Text}";
+                return $"expensing {Offer.Text} with confirmation of receipt of {Item.Text}";
             }
         }
     }
@@ -557,7 +565,7 @@ namespace TestActionGrammar
         {
             get
             {
-                return $" receipting {Item.Text} with confirmation of expense of {Offer.Text}";
+                return $"receipting {Item.Text} with confirmation of expense of {Offer.Text}";
             }
         }
     }
